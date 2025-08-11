@@ -35,3 +35,9 @@ yarn-error.*
 
 # typescript
 *.tsbuildinfo
+
+# to run the app
+- cd sally-trip-pl
+- npm run android
+- npm run ios
+- npm run web
