@@ -10,7 +10,6 @@ web-build/
 expo-env.d.ts
 
 # Native
-.kotlin/
 *.orig.*
 *.jks
 *.p8
@@ -36,11 +35,4 @@ yarn-error.*
 # typescript
 *.tsbuildinfo
 
-# to run the app
-- cd sally-trip-pl
-- npm run android
-- npm run ios
-- npm run web
-
-# react navigation for deep linking
-- https://reactnavigation.org/docs/5.x/configuring-links/
+app-example
