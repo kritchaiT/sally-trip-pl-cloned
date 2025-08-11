@@ -5,9 +5,10 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 const tabNavigator = () => {
     const Tab = createBottomTabNavigator();
   return (
-    <View>
-      <Text>tabNavigator</Text>
-    </View>
+    <Tab.Navigator>
+      <Tab.Screen name="Home" component={() => <View><Text>Home Screen</Text></View>} />
+      <Tab.Screen name="Settings" component={() => <View><Text>Settings Screen</Text></View>} />
+    </Tab.Navigator>
   )
 }
 
