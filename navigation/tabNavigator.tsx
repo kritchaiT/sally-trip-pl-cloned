@@ -1,17 +1,51 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
+import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import HomeStack from './HomeStack';
+import Ionicons from 'react-native-vector-icons/Ionicons';
+import GuideStack from './GuideStack';
 
-const tabNavigator = () => {
-    const Tab = createBottomTabNavigator();
+const TabNavigator = () => {
+  const Tab = createBottomTabNavigator();
+
   return (
-    <Tab.Navigator>
-      <Tab.Screen name="Home" component={() => <View><Text>Home Screen</Text></View>} />
-      <Tab.Screen name="Settings" component={() => <View><Text>Settings Screen</Text></View>} />
+    <Tab.Navigator screenOptions={{
+        tabbaractiveTintColor: '#FF5722',
+        tabBarInactiveTintColor: '#666',
+        tabBarStyle: {
+          backgroundColor: '#fff',
+          borderTopWidth: 0,
+          elevation: 0,
+          shadowColor: 'transparent',
+        },
+        tabbariconStyle: {
+          marginBottom: -3
+        },
+        tabBarLabelStyle: {
+          fontSize: 12,
+          marginBottom: 5,
+        },
+        headerShown: false,
+    }}>
+      <Tab.Screen name="Home" component={HomeStack} options={{
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="home" size={size} color={color} />
+          )
+        }}/>
+      <Tab.Screen name="Guide" component={GuideStack} options={{
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="book" size={size} color={color} />
+            )
+        }}/>
+        <Tab.Screen name="Profile" component={GuideStack} options={{
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="person" size={size} color={color} />
+            )
+        }}/>
     </Tab.Navigator>
-  )
-}
+  );
+};
 
-export default tabNavigator
+export default TabNavigator;
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({});
