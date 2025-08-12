@@ -3,6 +3,22 @@
   "compilerOptions": {
     "strict": true,
     "module": "Node16",
-    "moduleResolution": "node16"
-}
+    "moduleResolution": "node16",
+    "allowJs": true,
+    "checkJs": false,
+    "jsx": "react-native",
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "noEmit": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "types": [
+      "react",
+      "react-native",
+      "react-native-vector-icons",
+      "node"
+    ]
+  },
+  "exclude": ["node_modules", "babel.config.js", "metro.config.js", "jest.config.js"]
 }

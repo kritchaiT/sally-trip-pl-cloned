@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet } from 'react-native';
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import HomeStack from './HomeStack';
@@ -9,8 +9,9 @@ const TabNavigator = () => {
   const Tab = createBottomTabNavigator();
 
   return (
-    <Tab.Navigator screenOptions={{
-        tabbaractiveTintColor: '#FF5722',
+    <Tab.Navigator
+      screenOptions={{
+        tabBarActiveTintColor: '#FF5722',
         tabBarInactiveTintColor: '#666',
         tabBarStyle: {
           backgroundColor: '#fff',
@@ -18,30 +19,43 @@ const TabNavigator = () => {
           elevation: 0,
           shadowColor: 'transparent',
         },
-        tabbariconStyle: {
-          marginBottom: -3
+        tabBarIconStyle: {
+          marginBottom: -3,
         },
         tabBarLabelStyle: {
           fontSize: 12,
           marginBottom: 5,
         },
         headerShown: false,
-    }}>
-      <Tab.Screen name="Home" component={HomeStack} options={{
+      }}
+    >
+      <Tab.Screen
+        name="Home"
+        component={HomeStack}
+        options={{
           tabBarIcon: ({ color, size }) => (
             <Ionicons name="home" size={size} color={color} />
-          )
-        }}/>
-      <Tab.Screen name="Guide" component={GuideStack} options={{
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="Guide"
+        component={GuideStack}
+        opti`ons={{
           tabBarIcon: ({ color, size }) => (
             <Ionicons name="book" size={size} color={color} />
-            )
-        }}/>
-        <Tab.Screen name="Profile" component={GuideStack} options={{
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="Profile"
+        component={GuideStack}
+        options={{
           tabBarIcon: ({ color, size }) => (
             <Ionicons name="person" size={size} color={color} />
-            )
-        }}/>
+          ),
+        }}
+      />
     </Tab.Navigator>
   );
 };
