@@ -41,7 +41,7 @@ const TabNavigator = () => {
       <Tab.Screen
         name="Guide"
         component={GuideStack}
-        opti`ons={{
+        options={{
           tabBarIcon: ({ color, size }) => (
             <Ionicons name="book" size={size} color={color} />
           ),
@@ -63,3 +63,4 @@ const TabNavigator = () => {
 export default TabNavigator;
 
 const styles = StyleSheet.create({});
+``
