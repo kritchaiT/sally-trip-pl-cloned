@@ -11,4 +11,4 @@ const GuideScreen = () => {
 
 export default GuideScreen
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({})``
